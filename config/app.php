@@ -171,7 +171,7 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         Jenssegers\Agent\AgentServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
-    ])->toArray(),
+    ])->toArray(),  
 
     /*
     |--------------------------------------------------------------------------
