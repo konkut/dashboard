@@ -33,10 +33,10 @@ class ConnectControlle extends Controller
             // return response()->json($data);
             return $data;
         else:
-            if(Auth::attempt(['email' => $request->input('email_'.$autocomplete), 'password' => $request->input('password_'.$autocomplete)])):  
+            if(Auth::attempt(['email' => $request->input('email_'.$autocomplete), 'password' => $request->input('password_'.$autocomplete)])):
                 $data = ['type'=>'success'];
                 return response($data)->cookie('doris_device_trusted',null,-1);
-            else: 
+            else:
                 $data = ['type'=>'error','title'=> __('lg.general.error'), 'msg'=> __('lg.connect.connect_fail')];
                 return $data;
             endif;
