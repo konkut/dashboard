@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 class ConnectController extends Controller
 {
     public function __construct(){
-        //LE DECIMOS QUE A ESTE CONTROLADOR SOLO PUEDEN INGRESAR USUARIOS QUE NO ESTEN CONECTADOS O CON INICIO DE SESION
+        //LE DECIMOS QUE A ESTE CONTROLADOR SOLO PUEDEN INGRESAR USUARIOS QUE NO ESTEN CONECTADOS O CON EL INICIO DE SESION
         $this->middleware('guest')->except(['getLogout']);
     }
 
